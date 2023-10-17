@@ -1,0 +1,23 @@
+name: interview_ui
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.3
+  get_it: ^7.6.4
+  interview_application:
+    path: ../application
+  interview_domain:
+    path: ../domain
+
+dev_dependencies:
+  very_good_analysis: ^5.1.0
+
+flutter:
+  uses-material-design: true

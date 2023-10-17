@@ -1,0 +1,27 @@
+name: interview_project
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.3 <4.0.0"
+
+dependencies:
+  flex_color_scheme: ^7.3.1
+  flutter:
+    sdk: flutter
+  get_it: ^7.6.4
+  interview_application:
+    path: packages/application
+  interview_data:
+    path: packages/data
+  interview_ui:
+    path: packages/ui
+
+dev_dependencies:
+  very_good_analysis: ^5.1.0
+
+flutter:
+  uses-material-design: true
+
+scripts: scripts.yaml

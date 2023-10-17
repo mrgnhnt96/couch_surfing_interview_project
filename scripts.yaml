@@ -1,0 +1,12 @@
+br: # build runner
+  w: # watch
+    application: cd packages/application; flutter pub run build_runner watch --delete-conflicting-outputs
+    domain: cd packages/domain; flutter pub run build_runner watch --delete-conflicting-outputs
+
+build_runner:
+  watch:
+    application: $br:w:application
+    domain: $br:w:domain
+
+pub:
+  get: very_good packages get

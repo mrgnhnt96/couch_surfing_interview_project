@@ -10,6 +10,7 @@ import 'package:interview_ui/utils/date_time_extensions.dart';
 part 'components/__post.dart';
 part 'components/__posts.dart';
 part 'components/__icon_count.dart';
+part 'shared/shared.dart';
 
 class PostsView extends StatelessWidget {
   const PostsView({super.key});

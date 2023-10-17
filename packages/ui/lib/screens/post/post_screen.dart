@@ -11,8 +11,15 @@ class PostScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => getIt<PostBloc>()..events.fetch(id),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => getIt<PostBloc>()..events.fetch(id),
+        ),
+        BlocProvider(
+          create: (_) => getIt<CommentsBloc>()..events.fetch(id),
+        ),
+      ],
       child: const PostView(),
     );
   }

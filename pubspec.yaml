@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   get_it: ^7.6.4
+  go_router: ^11.1.4
   interview_application:
     path: packages/application
   interview_data:

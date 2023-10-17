@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.3
   get_it: ^7.6.4
+  go_router: ^11.1.4
+  go_router_paths: ^0.2.0
   interview_application:
     path: ../application
   interview_domain:

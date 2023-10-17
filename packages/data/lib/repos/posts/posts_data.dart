@@ -35,7 +35,10 @@ const posts = [
     'posted': '2023-05-19T05:53:46Z',
     'content':
         'donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet',
-    'images': ['https://source.unsplash.com/random/300×600'],
+    'images': [
+      'https://source.unsplash.com/random/300×600',
+      'https://source.unsplash.com/random/300×600',
+    ],
     'likes': 154,
     'comments': 12,
     'owner': {
@@ -48,8 +51,7 @@ const posts = [
     'id': '869F462A-1884-4D83-A51D-7438E0F8F142',
     'parent': null,
     'posted': '2022-03-05T03:46:20Z',
-    'content': null,
-    'images': [],
+    'images': ['https://source.unsplash.com/random/300×600'],
     'likes': 3856,
     'comments': 2,
     'owner': {
@@ -62,7 +64,8 @@ const posts = [
     'id': '6FDC8316-443B-468A-BCB5-704B94210F3C',
     'parent': null,
     'posted': '2023-02-10T01:04:07Z',
-    'content': null,
+    'content':
+        'donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet',
     'images': [],
     'likes': 5548,
     'comments': 7,
@@ -92,7 +95,7 @@ const posts = [
     'parent': null,
     'posted': '2022-01-03T17:56:52Z',
     'content': null,
-    'images': [],
+    'images': ['https://source.unsplash.com/random/300×600'],
     'likes': 9310,
     'comments': 0,
     'owner': {
@@ -120,7 +123,8 @@ const posts = [
     'id': 'E5912EB2-6DBA-4979-AB99-0BD74AB85233',
     'parent': null,
     'posted': '2022-01-01T10:08:33Z',
-    'content': null,
+    'content':
+        'hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut',
     'images': [],
     'likes': 210,
     'comments': 12,

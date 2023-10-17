@@ -10,8 +10,18 @@ class UserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => getIt<UserBloc>(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => getIt<UserBloc>()..events.current(),
+        ),
+        // BlocProvider(
+        //   create: (_) => getIt<PostsBloc>()..events.forUser(),
+        // ),
+        // BlocProvider(
+        //   create: (_) => getIt<CommentsBloc>()..events.forUser(),
+        // ),
+      ],
       child: const UserView(),
     );
   }

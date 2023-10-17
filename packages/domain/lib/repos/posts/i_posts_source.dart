@@ -5,7 +5,7 @@ abstract class IPostsSource {
 
   Future<List<Post>> all();
 
-  Future<Post> byId(String id);
+  Future<Post?> byId(String id);
 
   Future<List<Post>> byUser(String userId);
 

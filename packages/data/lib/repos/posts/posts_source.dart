@@ -29,7 +29,7 @@ class PostsSource implements IPostsSource {
   }
 
   @override
-  Future<List<Post>> byUser(String userId) async {
+  Future<List<Post>> byUser(int userId) async {
     final posts = await all();
 
     final usersPosts = <Post>[];
@@ -44,7 +44,7 @@ class PostsSource implements IPostsSource {
   }
 
   @override
-  Future<List<Post>> commentsByUser(String userId) async {
+  Future<List<Post>> commentsByUser(int userId) async {
     await Future<void>.delayed(const Duration(milliseconds: 1000));
 
     final posts = data.posts.map(Post.fromJson);
@@ -77,7 +77,7 @@ class PostsSource implements IPostsSource {
         continue;
       }
 
-      if (comment.parent!.id == postId) {
+      if (comment.parent == postId) {
         comments.add(comment);
       }
     }

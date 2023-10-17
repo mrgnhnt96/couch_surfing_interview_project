@@ -7,9 +7,9 @@ abstract class IPostsSource {
 
   Future<Post?> byId(String id);
 
-  Future<List<Post>> byUser(String userId);
+  Future<List<Post>> byUser(int userId);
 
   Future<List<Post>> commentsForPost(String postId);
 
-  Future<List<Post>> commentsByUser(String postId);
+  Future<List<Post>> commentsByUser(int userId);
 }

@@ -17,6 +17,16 @@ class _Fetch extends CommentsEvent {
   List<Object?> get props => _$props;
 }
 
+@autoequal
+class _ForUser extends CommentsEvent {
+  const _ForUser(this.userId);
+
+  final int userId;
+
+  @override
+  List<Object?> get props => _$props;
+}
+
 extension CommentsBlocX on CommentsBloc {
   // ignore: library_private_types_in_public_api
   _Events get events => _Events(this);
@@ -29,5 +39,9 @@ class _Events {
 
   void fetch(String postId) {
     _bloc.add(_Fetch(postId));
+  }
+
+  void forUser(int userId) {
+    _bloc.add(_ForUser(userId));
   }
 }

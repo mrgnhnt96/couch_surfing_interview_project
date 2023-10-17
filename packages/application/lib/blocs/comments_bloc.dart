@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:autoequal/autoequal.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
@@ -16,6 +18,7 @@ class CommentsBloc extends Bloc<CommentsEvent, CommentsState> {
   })  : _postsSource = postsSource,
         super(const _Loading()) {
     on<_Fetch>(_fetch);
+    on<_ForUser>(_forUser);
   }
 
   final IPostsSource _postsSource;
@@ -24,6 +27,14 @@ class CommentsBloc extends Bloc<CommentsEvent, CommentsState> {
     emit(const _Loading());
 
     final comments = await _postsSource.commentsForPost(event.postId);
+
+    emit(_Ready(comments));
+  }
+
+  FutureOr<void> _forUser(_ForUser event, Emitter<CommentsState> emit) async {
+    emit(const _Loading());
+
+    final comments = await _postsSource.commentsByUser(event.userId);
 
     emit(_Ready(comments));
   }

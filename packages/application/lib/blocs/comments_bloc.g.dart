@@ -12,6 +12,12 @@ extension _$_FetchAutoequal on _Fetch {
   List<Object?> get _$props => [postId];
 }
 
+extension _$_ForUserAutoequal on _ForUser {
+  @Deprecated(r'Use _$props instead')
+  List<Object?> get _autoequalProps => _$props;
+  List<Object?> get _$props => [userId];
+}
+
 extension _$_ReadyAutoequal on _Ready {
   @Deprecated(r'Use _$props instead')
   List<Object?> get _autoequalProps => _$props;

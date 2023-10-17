@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:interview_application/application.dart';
 import 'package:interview_domain/domain.dart';
+import 'package:interview_ui/routes/app_paths.dart';
 import 'package:interview_ui/shared/loading_indicator.dart';
 import 'package:interview_ui/utils/date_time_extensions.dart';
 

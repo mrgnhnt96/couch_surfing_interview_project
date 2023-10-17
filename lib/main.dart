@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interview_ui/ui.dart';
+import 'package:interview_application/application.dart' as application
+    show setup;
+import 'package:interview_data/data.dart' as data show setup;
+import 'package:interview_ui/ui.dart' as ui show setup;
+import 'package:interview_ui/ui.dart' hide setup;
 
 void main() {
+  final getIt = GetIt.asNewInstance();
+
+  data.setup(getIt);
+  application.setup(getIt);
+  ui.setup(getIt);
+
   runApp(const MyApp());
 }
 

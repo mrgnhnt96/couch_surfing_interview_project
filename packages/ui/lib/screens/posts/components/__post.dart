@@ -65,6 +65,20 @@ class _Post extends StatelessWidget {
                       },
                     ),
                   ),
+                const SizedBox(height: 16),
+                Row(
+                  children: <Widget>[
+                    _IconCount(
+                      icon: Icons.thumb_up_alt_rounded,
+                      count: data.likesFormatted,
+                    ),
+                    const SizedBox(width: 8),
+                    _IconCount(
+                      icon: Icons.comment_rounded,
+                      count: '${data.comments}',
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

@@ -20,6 +20,14 @@ class PostsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Posts'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              context.push(Paths.user.path);
+            },
+            icon: const Icon(Icons.person),
+          ),
+        ],
       ),
       body: const _Posts(),
     );

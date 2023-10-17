@@ -17,6 +17,7 @@ dependencies:
     path: ../application
   interview_domain:
     path: ../domain
+  intl: ^0.18.1
 
 dev_dependencies:
   very_good_analysis: ^5.1.0

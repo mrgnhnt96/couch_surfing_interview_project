@@ -2,7 +2,6 @@ import 'package:autoequal/autoequal.dart';
 
 import 'package:equatable/equatable.dart';
 import 'package:interview_domain/models/owner.dart';
-import 'package:interview_domain/models/parent.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'post.g.dart';
@@ -29,9 +28,33 @@ class Post extends Equatable {
   final int likes;
   final int comments;
   final Owner owner;
-  final Parent? parent;
+  final String? parent;
   final List<String> images;
   final DateTime posted;
+
+  String get likesFormatted {
+    if (likes > 1000 && likes < 1000000) {
+      var count = (likes / 1000).toStringAsFixed(1);
+
+      if (count.endsWith('.0')) {
+        count = count.split('.')[0];
+      }
+
+      return '${count}k';
+    }
+
+    if (likes > 1000000) {
+      var count = (likes / 1000000).toStringAsFixed(1);
+
+      if (count.endsWith('.0')) {
+        count = count.split('.')[0];
+      }
+
+      return '${count}m';
+    }
+
+    return '$likes';
+  }
 
   Map<String, dynamic> toJson() => _$PostToJson(this);
 

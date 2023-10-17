@@ -17,7 +17,7 @@ class Owner extends Equatable {
   // ignore: strict_raw_type
   factory Owner.fromJson(Map json) => _$OwnerFromJson(json);
 
-  final String id;
+  final int id;
   final String username;
   final String image;
 

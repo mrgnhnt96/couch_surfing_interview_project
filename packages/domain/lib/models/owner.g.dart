@@ -17,7 +17,7 @@ extension _$OwnerAutoequal on Owner {
 // **************************************************************************
 
 Owner _$OwnerFromJson(Map json) => Owner(
-      id: json['id'] as String,
+      id: json['id'] as int,
       username: json['username'] as String,
       image: json['image'] as String,
     );

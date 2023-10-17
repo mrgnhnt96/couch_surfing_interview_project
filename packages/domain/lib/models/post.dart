@@ -26,7 +26,7 @@ class Post extends Equatable {
   final String id;
   final String? content;
   final int likes;
-  final List<Post> comments;
+  final int comments;
   final Owner owner;
   final Parent? parent;
   final List<String> images;

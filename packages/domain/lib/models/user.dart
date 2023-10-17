@@ -22,7 +22,7 @@ class User extends Equatable {
   // ignore: strict_raw_type
   factory User.fromJson(Map json) => _$UserFromJson(json);
 
-  final String id;
+  final int id;
   final String firstName;
   final String lastName;
   final String? image;

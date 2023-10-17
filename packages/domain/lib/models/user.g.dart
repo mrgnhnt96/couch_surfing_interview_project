@@ -18,7 +18,7 @@ extension _$UserAutoequal on User {
 // **************************************************************************
 
 User _$UserFromJson(Map json) => User(
-      id: json['id'] as String,
+      id: json['id'] as int,
       firstName: json['first_name'] as String,
       lastName: json['last_name'] as String,
       image: json['image'] as String?,

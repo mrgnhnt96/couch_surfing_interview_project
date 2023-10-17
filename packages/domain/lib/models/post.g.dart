@@ -21,9 +21,7 @@ Post _$PostFromJson(Map json) => Post(
       id: json['id'] as String,
       content: json['content'] as String?,
       likes: json['likes'] as int,
-      comments: (json['comments'] as List<dynamic>)
-          .map((e) => Post.fromJson(e as Map))
-          .toList(),
+      comments: json['comments'] as int,
       owner: Owner.fromJson(json['owner'] as Map),
       parent: json['parent'] == null
           ? null
@@ -36,7 +34,7 @@ Map<String, dynamic> _$PostToJson(Post instance) => <String, dynamic>{
       'id': instance.id,
       'content': instance.content,
       'likes': instance.likes,
-      'comments': instance.comments.map((e) => e.toJson()).toList(),
+      'comments': instance.comments,
       'owner': instance.owner.toJson(),
       'parent': instance.parent?.toJson(),
       'images': instance.images,

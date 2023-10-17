@@ -10,7 +10,7 @@ extension _$PostAutoequal on Post {
   @Deprecated(r'Use _$props instead')
   List<Object?> get _autoequalProps => _$props;
   List<Object?> get _$props =>
-      [id, content, likes, comments, owner, parent, images];
+      [id, content, likes, comments, owner, parent, images, posted];
 }
 
 // **************************************************************************
@@ -28,6 +28,7 @@ Post _$PostFromJson(Map json) => Post(
           : Parent.fromJson(json['parent'] as Map),
       images:
           (json['images'] as List<dynamic>).map((e) => e as String).toList(),
+      posted: DateTime.parse(json['posted'] as String),
     );
 
 Map<String, dynamic> _$PostToJson(Post instance) => <String, dynamic>{
@@ -38,4 +39,5 @@ Map<String, dynamic> _$PostToJson(Post instance) => <String, dynamic>{
       'owner': instance.owner.toJson(),
       'parent': instance.parent?.toJson(),
       'images': instance.images,
+      'posted': instance.posted.toIso8601String(),
     };

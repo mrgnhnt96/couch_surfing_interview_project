@@ -18,6 +18,7 @@ class Post extends Equatable {
     required this.owner,
     required this.parent,
     required this.images,
+    required this.posted,
   });
 
   // ignore: strict_raw_type
@@ -30,6 +31,7 @@ class Post extends Equatable {
   final Owner owner;
   final Parent? parent;
   final List<String> images;
+  final DateTime posted;
 
   Map<String, dynamic> toJson() => _$PostToJson(this);
 
